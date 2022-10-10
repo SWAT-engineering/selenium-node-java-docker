@@ -8,7 +8,6 @@ RUN set -ex \
     && apt-get update && apt-get install -y ca-certificates curl apt-transport-https lsb-release wget gnupg --no-install-recommends \
     && (curl -sL https://deb.nodesource.com/setup_16.x | bash -) \
     && apt-get install -y nodejs gcc g++ make xvfb libgtk-3-0 libgbm1 libnss3 libasound2 \
-    && npm install react \
     && rm -rf /var/lib/apt/lists/* 
 
 
