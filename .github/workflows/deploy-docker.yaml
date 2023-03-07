@@ -1,6 +1,7 @@
 name: Docker Image CI
 
 on:
+  workflow_dispatch: 
   push:
     branches: [ main ]
     tags:
@@ -13,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-
 
     - name: Log in to Docker Hub
       if: github.event_name != 'pull_request'
